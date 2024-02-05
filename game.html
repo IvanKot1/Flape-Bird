@@ -8,11 +8,23 @@
  <title>Flappy Bird!</title>
 </head>
 <body>
+    <button onclick="close_hlebalo()">Закрыть хлебало</button>
 
     <div class="container">
         <canvas id="canvas" width="288" height="512"></canvas>
     </div>
+<script>
 
- <script src="game.js"></script>
+
+    function close_hlebalo(){
+        let openedWindow;
+
+    let question = confirm("Вы уверены, что хотите закрыть хлебало?")
+    if (question == true) {
+        window.open("", '_self').window.close();
+    }
+}
+</script>
+ <!-- <script src="game.js"></script> -->
 </body>
 </html>
