@@ -33,7 +33,8 @@ function moveUp() {
 
 // Создание блоков
 var pipe = [];
-
+//history score
+let history_score = [];
 pipe[0] = {
  x : cvs.width,
  y : 0
@@ -67,11 +68,15 @@ function draw() {
  && (yPos <= pipe[i].y + pipeUp.height
  || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
  location.reload(); // Перезагрузка страницы
- }
+ history_score.push(score)
+
+
+
+ } 
 
  if(pipe[i].x == 5) {
  score++;
- score_audio.play();
+ score_audio.play(); 
  }
  }
 
@@ -86,6 +91,7 @@ function draw() {
 
  requestAnimationFrame(draw);
 }
+console.log(history_score);
 
 pipeBottom.onload = draw;
 

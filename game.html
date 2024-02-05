@@ -8,7 +8,7 @@
  <title>Flappy Bird!</title>
 </head>
 <body>
-    <button onclick="close_hlebalo()">Закрыть хлебало</button>
+    <button onclick="close()">Закрыть</button>
 
     <div class="container">
         <canvas id="canvas" width="288" height="512"></canvas>
@@ -16,15 +16,16 @@
 <script>
 
 
-    function close_hlebalo(){
+    function close(){
         let openedWindow;
 
-    let question = confirm("Вы уверены, что хотите закрыть хлебало?")
+    let question = confirm("Вы уверены, что хотите закрыть?")
     if (question == true) {
-        window.open("", '_self').window.close();
+        location.href = 'index.html';
+        // customWindow.close();    
     }
 }
 </script>
- <!-- <script src="game.js"></script> -->
+ <script src="game.js"></script>
 </body>
 </html>
